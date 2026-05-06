@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversor de Bases</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Conversor de Bases</h1>
+    <div class="container">
+        <!-- Coluna 1: Decimal -->
+        <div class="coluna coluna1">
+            <h2>Decimal → Binário / Hexadecimal</h2>
+            <form method="POST">
+                <input type="hidden" name="coluna" value="1">
+                <input type="text" name="numero" placeholder="Digite um número decimal" required>
+                <select name="base_destino">
+                    <option value="binario">Binário</option>
+                    <option value="hexadecimal">Hexadecimal</option>
+                </select>
+                <button type="submit">Converter</button>
+            </form>
+            {% if resultado1 %}
+            <input type="text" class="resultado" value="{{ resultado1 }}" readonly>
+            {% endif %}
+        </div>
+
+        <!-- Coluna 2: Binário -->
+        <div class="coluna coluna2">
+            <h2>Binário → Decimal / Hexadecimal</h2>
+            <form method="POST">
+                <input type="hidden" name="coluna" value="2">
+                <input type="text" name="numero" placeholder="Digite um número binário" required>
+                <select name="base_destino">
+                    <option value="decimal">Decimal</option>
+                    <option value="hexadecimal">Hexadecimal</option>
+                </select>
+                <button type="submit">Converter</button>
+            </form>
+            {% if resultado2 %}
+            <input type="text" class="resultado" value="{{ resultado2 }}" readonly>
+            {% endif %}
+        </div>
+
+        <!-- Coluna 3: Hexadecimal -->
+        <div class="coluna coluna3">
+            <h2>Hexadecimal → Binário / Decimal</h2>
+            <form method="POST">
+                <input type="hidden" name="coluna" value="3">
+                <input type="text" name="numero" placeholder="Digite um número hexadecimal" required>
+                <select name="base_destino">
+                    <option value="binario">Binário</option>
+                    <option value="decimal">Decimal</option>
+                </select>
+                <button type="submit">Converter</button>
+            </form>
+            {% if resultado3 %}
+            <input type="text" class="resultado" value="{{ resultado3 }}" readonly>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Campo geral de saída -->
+    <div class="saida-geral">
+        <h2>Último Resultado</h2>
+        {% if resultado1 %}
+        <input type="text" class="resultado" value="{{ resultado1 }}" readonly>
+        {% elif resultado2 %}
+        <input type="text" class="resultado" value="{{ resultado2 }}" readonly>
+        {% elif resultado3 %}
+        <input type="text" class="resultado" value="{{ resultado3 }}" readonly>
+        {% else %}
+        <p>Nenhuma conversão realizada ainda.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
