@@ -1,18 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Página Inicial</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
-    <h1>Conversor de Bases</h1>
+
+   
     <nav>
-        <ul>
-            <li><a href="/">Início</a></li>
-            <li><a href="/grupo">Grupo</a></li>
-            <li><a href="/conversor">Conversor</a></li>
-        </ul>
+        <a href="/">Início</a> |
+        <a href="/conversor">Conversor</a> |
+        <a href="/grupo">Integrantes</a>
     </nav>
+
+    <div class="container-home">
+        <h1>Bases Numéricas</h1>
+
+        <p>
+            As bases numéricas são fundamentais na área da computação e da matemática,
+            pois representam diferentes formas de expressar valores numéricos.
+        </p>
+
+        <h2>Sistema Decimal </h2>
+        <p>
+            O sistema decimal é o mais utilizado no dia a dia, sendo intuitivo para os seres humanos,
+            pois utiliza os algarismos de 0 a 9.
+        </p>
+
+        <h2>Sistema Binário </h2>
+        <p>
+            O sistema binário é essencial para os computadores, pois todo o processamento digital
+            é realizado utilizando apenas dois valores: 0 e 1, que representam estados elétricos.
+        </p>
+
+        <h2>Sistema Hexadecimal </h2>
+        <p>
+            O sistema hexadecimal é muito utilizado na programação e eletrônica, pois facilita a leitura
+            de grandes sequências binárias. É comum em cores, endereços de memória e sistemas computacionais.
+        </p>
+
+        <h2>Sistema Octal </h2>
+        <p>
+            O sistema octal possui aplicações específicas na computação, como na representação de permissões
+            de arquivos em sistemas operacionais.
+        </p>
+
+        <p>
+            Dessa forma, compreender as diferentes bases numéricas é essencial para entender o funcionamento
+            dos computadores e desenvolver soluções tecnológicas.
+        </p>
+
+        <a href="/conversor" class="botao">Ir para o Conversor</a>
+    </div>
+
 </body>
 </html>
