@@ -3,9 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
     <title>Descrição</title>
 </head>
 <body>
+<nav class="menu">
+
+    <div class="logo">
+        Conversor de Bases
+    </div>
+
+    <ul>
+        <li><a href="{{ url_for('index') }}">Início</a></li>
+
+        <li><a href="{{ url_for('conversor') }}">Conversor</a></li>
+
+        <li><a href="{{ url_for('grupo') }}">Integrantes</a></li>
+    </ul>
+
+</nav>
+
+<div class="container">
     <p>
         As bases numéricas são fundamentais na área da computação, pois representam diferentes formas de expressar valores numéricos.
         Embora o ser humano utilize principalmente o sistema decimal (base 10), os computadores operam internamente utilizando o sistema binário (base 2),
@@ -46,4 +64,4 @@
 </div>
 
 </body>
-</html>de
+</html>
