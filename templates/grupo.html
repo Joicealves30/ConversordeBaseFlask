@@ -1,13 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grupo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Integrantes</title>
 </head>
 <body>
-    <h1>Joice</h1>
-    <h1>Melissa</h1>
-    <h1>Laurene</h1>
+      <nav>
+    <a href="/">Início</a> |
+    <a href="/conversor">Conversor</a> |
+    <a href="/grupo">Integrantes</a>
+    </nav>
+    <h1>Integrantes do grupo</h1>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Tarefa</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Laurene</td>
+                <td>Responsável pela página descrição das bases</td>
+                
+            </tr>
+
+            <tr>
+                <td>Melissa</td>
+                <td>Responsável pela página de Integrantes</td>    
+            </tr>
+
+            <tr>
+                <td>Joice</td>
+                <td>Responsável pelas rotas e pelo conversor</td>    
+            </tr>
+        </table>
+        </div>
 </body>
 </html>
